@@ -106,6 +106,7 @@ namespace OpenRA.Platforms.Default
 
 			VerifyThreadAffinity();
 			OpenGL.glFlush();
+
 			OpenGL.CheckGLError();
 			OpenGL.glBindFramebuffer(OpenGL.GL_FRAMEBUFFER, 0);
 			OpenGL.CheckGLError();
