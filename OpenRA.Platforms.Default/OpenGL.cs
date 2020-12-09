@@ -746,7 +746,7 @@ namespace OpenRA.Platforms.Default
 				return;
 
 			var type = glGetError();
-			if (type == GL_NO_ERROR) return;
+
 			string errorText;
 			errorText = ErrorToText.TryGetValue(type, out errorText) ? errorText : type.ToString("X");
 			var error = "GL Error: {0}\n{1}".F(errorText, new StackTrace());
