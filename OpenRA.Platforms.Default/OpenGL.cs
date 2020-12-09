@@ -739,6 +739,8 @@ namespace OpenRA.Platforms.Default
 
 		public static void CheckGLError()
 		{
+			if (glGetError() == GL_NO_ERROR) return;
+
 			// Let the debug message handler log the errors instead.
 			if ((Features & GLFeatures.DebugMessagesCallback) == GLFeatures.DebugMessagesCallback)
 				return;
